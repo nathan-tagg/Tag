@@ -71,9 +71,9 @@ public:
    int  isRight()     const { return isRightPress;  };
    int  isRapid()     const { return isRapidPress;  };
    bool isSpace()     const { return isSpacePress;  };
-   int isZ()         const { return isZPress;      };
-   int isX()         const { return isXPress;      };
-   int isC()         const { return isCPress;      };
+   int  isZ()         const { return isZPress;      };
+   int  isX()         const { return isXPress;      };
+   int  isC()         const { return isCPress;      };
    bool isV()         const { return isVPress;      };
    bool isB()         const { return isBPress;      };
    bool isN()         const { return isNPress;      };
@@ -81,7 +81,8 @@ public:
    bool isI()         const { return isIPress;      };
    bool isT()         const { return isTPress;      };
    bool isA()         const { return isAPress;      };
-   int isS()         const { return isSPress;      };
+   int  isQ()         const { return isQPress;      };
+   int  isS()         const { return isSPress;      };
 //   bool isD()         const { return isDPress;      };
 //   bool isF()         const { return isFPress;      };
    
@@ -101,9 +102,9 @@ private:
    static int  isRightPress;         //    "   right      "
    static int  isRapidPress;
    static bool isSpacePress;         //    "   space      "
-   static int isZPress;
-   static int isXPress;
-   static int isCPress;             //    "   c          "
+   static int  isZPress;
+   static int  isXPress;
+   static int  isCPress;             //    "   c          "
    static bool isVPress;
    static bool isBPress;
    static bool isNPress;
@@ -111,7 +112,8 @@ private:
    static bool isIPress;
    static bool isTPress;
    static bool isAPress;
-   static int isSPress;
+   static int  isQPress;
+   static int  isSPress;
 //   static bool isDPress;
 //   static bool isFPress;
 

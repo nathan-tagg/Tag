@@ -151,7 +151,7 @@ void drawNumber(const Point & topLeft, unsigned short & number)
  ************************************************************************/
 void drawText(const Point & topLeft, const char * text)
 {
-   void *pFont = GLUT_BITMAP_HELVETICA_12;  // also try _18
+   void *pFont = GLUT_BITMAP_HELVETICA_18;  // also try _18
 
    // prepare to draw the text from the top-left corner
    glRasterPos2f(topLeft.getX(), topLeft.getY());

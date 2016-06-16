@@ -80,7 +80,7 @@ public:
 			drawCircle(point, 7);
 		if (tauntTime)
 		{
-			Point taunt(point.getX() - 25, point.getY() + 20);
+			Point taunt(point.getX() - 40, point.getY() + 35);
 			drawText(taunt, "You're it!");
 		}
 
@@ -101,7 +101,8 @@ public:
 
 	void freeze()
 	{
-		frozen = 360;
+		if (!frozen)
+			frozen = 360;
 	}
 
 	void isIt()

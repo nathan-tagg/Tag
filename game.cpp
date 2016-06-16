@@ -102,20 +102,20 @@ void Game :: advance()
  	if (!ui.isZ() && !ui.isC())
  		carTwo.align();
 
- 	if (ui.isSpace() && cooldown <= 0)
+ 	if (ui.isRapid() && cooldown <= 0)
  	{
  		Bullet * newBullet = new Bullet;
  		newBullet->fire(car.getPoint(), car.getDirection());
  		bullets.push_back(newBullet);
- 		cooldown = 10;
+ 		cooldown = 30;
  	}
 
- 	if (ui.isA() && cooldownTwo <= 0)
+ 	if (ui.isQ() && cooldownTwo <= 0)
  	{
 		Bullet * newBullet = new Bullet;
  		newBullet->fire(carTwo.getPoint(), carTwo.getDirection());
  		bullets.push_back(newBullet);
- 		cooldownTwo = 10;
+ 		cooldownTwo = 30;
  	}
 
  	if (cooldown > 0)

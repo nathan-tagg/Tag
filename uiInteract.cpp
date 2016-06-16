@@ -210,6 +210,9 @@ void Interface::keyEvent(int key, bool fDown)
       case 's':
          isSPress = fDown;
          break;
+      case 'q':
+         isQPress = fDown;
+         break;
 //      case 'd':
 //         isDPress = fDown;
 //         break;
@@ -245,6 +248,8 @@ void Interface::keyEvent()
       isXPress++;
    if (isCPress)
       isCPress++;
+   if (isQPress)
+      isQPress++;
    isSpacePress = false;
    isVPress = false;
    isBPress = false;
@@ -301,9 +306,9 @@ int          Interface::isLeftPress  = 0;
 int          Interface::isRightPress = 0;
 int          Interface::isRapidPress = 0;
 bool         Interface::isSpacePress = false;
-int         Interface::isZPress =     0;
-int         Interface::isXPress =     0;
-int         Interface::isCPress =     0;
+int          Interface::isZPress =     0;
+int          Interface::isXPress =     0;
+int          Interface::isCPress =     0;
 bool         Interface::isVPress =     false;
 bool         Interface::isBPress =     false;
 bool         Interface::isNPress =     false;
@@ -311,7 +316,8 @@ bool         Interface::isMPress =     false;
 bool         Interface::isIPress =     false;
 bool         Interface::isTPress =     false;
 bool         Interface::isAPress =     false;
-int         Interface::isSPress =     0;
+int          Interface::isQPress =     0;
+int          Interface::isSPress =     0;
 //bool         Interface::isDPress =     false;
 //bool         Interface::isFPress =     false;
 bool         Interface::initialized  = false;
