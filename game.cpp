@@ -43,6 +43,8 @@ Game :: ~Game()
  ***************************************/
 void Game :: advance()
 {
+	bool tauntOne = false;
+	bool tauntTwo = false;
 	car.advance();
 	carTwo.advance();
 	for(list<Bullet*> :: iterator it = bullets.begin(); it != bullets.end(); ++it)
@@ -58,9 +60,9 @@ void Game :: advance()
 	for (list<Bullet*> :: iterator it = bullets.begin(); it != bullets.end(); ++it)
     {
     	if ((*it)->getPoint() - car.getPoint() < 15 && (*it)->getLife() < 28)
-    		car.freeze();
+    		tauntTwo = car.freeze();
     	if ((*it)->getPoint() - carTwo.getPoint() < 15 && (*it)->getLife() < 28)
-    		carTwo.freeze();
+    		tauntOne = carTwo.freeze();
 	}
 	if (car.getPoint() - carTwo.getPoint() < 30 && !cooldownThree)
 	{
@@ -72,6 +74,10 @@ void Game :: advance()
 	{
 		cooldownThree--;
 	}
+	if (tauntOne)
+		car.sayStuff();
+	if (tauntTwo)
+		carTwo.sayStuff();
 
 
 }

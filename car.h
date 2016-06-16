@@ -17,6 +17,7 @@ private:
 	short frozen;
 	bool it;
 	short tauntTime;
+	short witchTaunt;
 
 public:
 	Car()
@@ -81,7 +82,13 @@ public:
 		if (tauntTime)
 		{
 			Point taunt(point.getX() - 40, point.getY() + 35);
-			drawText(taunt, "You're it!");
+			if (witchTaunt == 0)
+				drawText(taunt, "You're it!");
+			else if (witchTaunt == 1)
+				drawText(taunt, "Too slow!!");
+			else if (witchTaunt == 2)
+				drawText(taunt, "  Freeze! ");
+
 		}
 
 	}
@@ -99,10 +106,17 @@ public:
 			tauntTime--;
 	}
 
-	void freeze()
+	bool freeze()
 	{
 		if (!frozen)
 			frozen = 360;
+		return !(random(10, 100) % 9);
+	}
+
+	void sayStuff()
+	{
+		witchTaunt = 2;
+		tauntTime = 30;
 	}
 
 	void isIt()
@@ -112,6 +126,7 @@ public:
 			tauntTime = 60;
 		}
 		it = !it;
+		witchTaunt = (random(0, 10) % 2);
 	}
 
 	void align()
